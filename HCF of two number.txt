@@ -1,0 +1,23 @@
+/*
+HCF Of Two Numbers Program
+*/
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+int main(){
+	int a,b,temp;
+	cout<<"Enter a,b"<<endl;
+	cin>>a>>b;
+	
+	temp=a%b;
+	while(temp>=0){
+		if(temp==0){
+			cout<<"Highest common factor is: "<<b;
+			break;
+		}
+		a=b;
+		b=temp;
+		temp=a%b;
+	}
+}
