@@ -1,0 +1,37 @@
+/*
+Find Ncr & Npr
+*/
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+int main(){
+	int n,r,fact=1,fact1=1,fact2=1,denom,npr,ncr;
+	cout<<"Enter n"<<endl;
+	cin>>n;
+	
+	cout<<"Enter r"<<endl;
+	cin>>r;
+	
+	denom=n-r;
+	while(n>0){
+		fact*=n;
+		n--;
+	}
+	
+	while(r>0){
+		fact1*=r;
+		r--;
+	}
+	
+	while(denom>0){
+		fact2*=denom;
+		denom--;
+	}
+	
+	npr=fact/fact2;
+	ncr=npr/fact1;
+	
+	cout<<"Permutation is :"<<npr<<endl;
+	cout<<"Combination is: "<<ncr<<endl;
+}
